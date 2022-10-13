@@ -13,6 +13,7 @@
   --bgr-gray: #f5f4fa;
   --bgr-dark: #2f303a;
   --border-color: #eeeeee;
+  --border-client: #afb1b8;
 
   --card-set-gap: 30px;
 }
@@ -90,7 +91,7 @@ body {
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 .header-list {
@@ -158,6 +159,22 @@ body {
   padding-bottom: 200px;
 }
 
+.overlay {
+  height: 600px;
+  max-width: 1600px;
+  background-image: linear-gradient(
+      to right,
+      rgb(47, 48, 58, 0.4),
+      rgb(47, 48, 58, 0.4)
+    ),
+    url(../images/bg_hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero-title {
   width: 694px;
   font-weight: 900;
@@ -188,6 +205,7 @@ body {
 }
 
 .button.primary {
+  border: none;
   background-color: var(--accent-color);
   padding: 10px 32px;
   display: block;
@@ -200,7 +218,7 @@ body {
 
 /*==========SECTION  Наші особливості ===========*/
 .section {
-  padding-top: 89px;
+  padding-top: 94px;
 }
 .list-item {
   display: flex;
@@ -211,6 +229,32 @@ body {
   width: 270px;
 }
 
+.item-content::before {
+  content: "";
+  display: block;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: var(--bgr-gray);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-antena::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
 .title-after {
   font-weight: 700;
   font-size: 14px;
@@ -264,6 +308,7 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 10px;
 
   color: var(--title-color);
 }
@@ -271,7 +316,7 @@ body {
 .team-item-work {
   font-size: 16px;
   line-height: 1.19;
-  margin-top: 10px;
+  margin-bottom: 16px;
   text-align: center;
 
   color: var(--text-color);
@@ -283,6 +328,56 @@ body {
   border-radius: 0px 0px 4px 4px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/*=============CLIENTS=================*/
+
+.clients {
+  /* background-color: var(--white); */
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.list-client {
+  display: flex;
+  gap: var(--card-set-gap);
+}
+
+.icons {
+  display: block;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--border-client);
+  border-radius: 4px;
+
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-logo1 {
+  background-image: url(../images/logo1.svg);
+}
+
+.icon-logo2 {
+  background-image: url(../images/logo2.svg);
+}
+
+.icon-logo3 {
+  background-image: url(../images/logo3.svg);
+}
+
+.icon-logo4 {
+  background-image: url(../images/logo4.svg);
+}
+
+.icon-logo5 {
+  background-image: url(../images/logo5.svg);
+}
+
+.icon-logo6 {
+  background-image: url(../images/logo6.svg);
 }
 
 /*============FOTTER===================*/
@@ -325,6 +420,61 @@ body {
   color: var(--white_alpha);
 }
 
+.bloks {
+  display: flex;
+  gap: 70px;
+}
+
+.blok-join {
+  padding-top: 12px;
+}
+
+.title-join {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+}
+
+.list-join {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-join {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #44454e;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-join:hover,
+.icon-join:focus {
+  background-color: var(--accent-color);
+}
+
+.instagram {
+  background-image: url(../images/instagram.svg);
+}
+
+.twitter {
+  background-image: url(../images/twitter.svg);
+}
+
+.facebook {
+  background-image: url(../images/facebook.svg);
+}
+
+.linkedin {
+  background-image: url(../images/linkedin.svg);
+}
 /*===============PORTFOLIO==============*/
 
 .portfolio {
