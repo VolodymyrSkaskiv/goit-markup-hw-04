@@ -91,7 +91,6 @@ body {
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
-  /* border: 1px solid; */
 }
 
 .header-list {
@@ -107,14 +106,6 @@ body {
   align-items: center;
 }
 
-.nav-menu .item + .item,
-.mail-tel .item + .item {
-  margin-left: 50px;
-}
-
-.mail-tel {
-  justify-content: flex-end;
-}
 .nav-item {
   font-weight: 500;
   line-height: 1.14;
@@ -137,6 +128,23 @@ body {
   color: var(--text-color);
 }
 
+.icon-smartphone,
+.icon-letter {
+  margin-right: 10px;
+}
+
+.nav-menu .item + .item {
+  margin-left: 50px;
+}
+
+.mail-tel .item + .item {
+  margin-left: 30px;
+}
+
+.mail-tel {
+  justify-content: flex-end;
+}
+
 /*=========FOCUS HOVER====================*/
 
 .accent,
@@ -149,6 +157,7 @@ body {
 .email-tel:hover,
 .email-tel:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /*========================HERO================ */
@@ -213,9 +222,6 @@ body {
   margin-right: auto;
 }
 
-/* .button.secondary {
-} */
-
 /*==========SECTION  Наші особливості ===========*/
 .section {
   padding-top: 94px;
@@ -223,10 +229,7 @@ body {
 .list-item {
   display: flex;
   gap: 30px;
-}
-
-.item-content {
-  width: 270px;
+  padding-bottom: 94px;
 }
 
 .item-content::before {
@@ -238,6 +241,15 @@ body {
   background-color: var(--bgr-gray);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.item-content {
+  display: block;
+  height: 120px;
+  width: 270px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: var(--bgr-gray);
 }
 
 .icon-antena::before {
@@ -301,6 +313,7 @@ body {
 .team-content {
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: var(--white);
 }
 
 .team-item {
@@ -329,6 +342,34 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.list-join-team {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* .item-join-team {
+  display: flex;
+  
+} */
+
+.icon-join-team {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--white);
+  fill: #afb1b8;
+  background-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-join-team:focus,
+.icon-join-team:hover {
+  background-color: var(--accent-color);
+  fill: var(--white);
+}
 
 /*=============CLIENTS=================*/
 
@@ -343,41 +384,24 @@ body {
   gap: var(--card-set-gap);
 }
 
-.icons {
-  display: block;
+.icon-join-client {
+  display: flex;
   width: 170px;
   height: 92px;
 
   border: 1px solid var(--border-client);
   border-radius: 4px;
 
-  background-color: var(--white);
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: #afb1b8;
+  background-size: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-.icon-logo1 {
-  background-image: url(../images/logo1.svg);
-}
-
-.icon-logo2 {
-  background-image: url(../images/logo2.svg);
-}
-
-.icon-logo3 {
-  background-image: url(../images/logo3.svg);
-}
-
-.icon-logo4 {
-  background-image: url(../images/logo4.svg);
-}
-
-.icon-logo5 {
-  background-image: url(../images/logo5.svg);
-}
-
-.icon-logo6 {
-  background-image: url(../images/logo6.svg);
+.icon-join-client:hover,
+.icon-join-client:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /*============FOTTER===================*/
@@ -446,35 +470,20 @@ body {
 }
 
 .icon-join {
-  display: block;
+  display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: #44454e;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: var(--bgr-white);
+  align-items: center;
+  justify-content: center;
 }
 .icon-join:hover,
 .icon-join:focus {
   background-color: var(--accent-color);
 }
 
-.instagram {
-  background-image: url(../images/instagram.svg);
-}
-
-.twitter {
-  background-image: url(../images/twitter.svg);
-}
-
-.facebook {
-  background-image: url(../images/facebook.svg);
-}
-
-.linkedin {
-  background-image: url(../images/linkedin.svg);
-}
 /*===============PORTFOLIO==============*/
 
 .portfolio {
@@ -499,6 +508,14 @@ body {
   letter-spacing: 0.03em;
   color: var(--title-color);
   background-color: var(--bgr-gray);
+}
+
+.radio-btn:hover,
+.radio-btn:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  background-color: var(--accent-color);
+  color: var(--white);
 }
 
 .radio-btn.primary {
@@ -527,6 +544,11 @@ body {
   margin-left: var(--card-set-gap);
 }
 
+.card-item:hover,
+.card-item:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 /* .card {
   box-shadow: ;
   border-radius: 5px;
